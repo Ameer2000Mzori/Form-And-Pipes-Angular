@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -10,7 +15,11 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class FormComponent {
   profileForm = new FormGroup({
-    firstName: new FormControl(''),
+    firstName: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(15),
+    ]),
     lastName: new FormControl(''),
     address: new FormGroup({
       street: new FormControl(''),
@@ -21,7 +30,6 @@ export class FormComponent {
   });
 
   onSubmit() {
-    // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
   }
 }
