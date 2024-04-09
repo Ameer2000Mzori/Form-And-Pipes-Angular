@@ -1,24 +1,35 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <label for="first-name">First Name: </label>
-  <input id="first-name" type="text" formControlName="firstName" />
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form-wrap">
+  <div class="label-Input-Wrapper">
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName" />
+  </div>
+  <div class="label-Input-Wrapper">
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName" />
+  </div>
 
-  <label for="last-name">Last Name: </label>
-  <input id="last-name" type="text" formControlName="lastName" />
-
-  <div formGroupName="address">
+  <div class="label-Input-Wrapper" formGroupName="address">
     <h2>Address</h2>
 
-    <label for="street">Street: </label>
-    <input id="street" type="text" formControlName="street" />
+    <div class="label-Input-Wrapper">
+      <label for="street">Street: </label>
+      <input id="street" type="text" formControlName="street" />
+    </div>
 
-    <label for="city">City: </label>
-    <input id="city" type="text" formControlName="city" />
+    <div class="label-Input-Wrapper">
+      <label for="city">City: </label>
+      <input id="city" type="text" formControlName="city" />
+    </div>
 
-    <label for="state">State: </label>
-    <input id="state" type="text" formControlName="state" />
+    <div class="label-Input-Wrapper">
+      <label for="state">State: </label>
+      <input id="state" type="text" formControlName="state" />
+    </div>
 
-    <label for="zip">Zip Code: </label>
-    <input id="zip" type="text" formControlName="zip" />
+    <div class="label-Input-Wrapper">
+      <label for="zip">Zip Code: </label>
+      <input id="zip" type="text" formControlName="zip" />
+    </div>
   </div>
 
   <p>Complete the form to enable button.</p>

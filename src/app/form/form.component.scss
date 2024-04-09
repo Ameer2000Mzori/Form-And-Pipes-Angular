@@ -1,0 +1,18 @@
+.form-wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  .label-Input-Wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    text-align: start;
+    justify-content: center;
+    gap: 5px;
+  }
+}
