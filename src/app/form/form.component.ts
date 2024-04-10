@@ -38,8 +38,6 @@ export class FormComponent {
   });
 
   onSubmit() {
-    console.warn(this.profileForm.value);
-
     this.dataService.saveData(this.profileForm.value);
   }
 }
