@@ -1,0 +1,16 @@
+<p>data-list works!</p>
+<div>
+  @for(person of data; track person.index){
+  <div>
+    <p>Name: {{ person.firstName }}</p>
+    <p>Name: {{ person.lastName }}</p>
+    <div>
+      <h5>address</h5>
+      <p>street: {{ person.address.street }}</p>
+      <p>City: {{ person.address.city }}</p>
+      <p>state: {{ person.address.state }}</p>
+      <p>zip: {{ person.address.zip }}</p>
+    </div>
+  </div>
+  }
+</div>

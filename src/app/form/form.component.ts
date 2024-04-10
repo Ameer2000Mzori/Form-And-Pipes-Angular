@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
+
 import {
   FormControl,
   FormGroup,
@@ -14,13 +16,19 @@ import {
   styleUrl: './form.component.scss',
 })
 export class FormComponent {
+  constructor(private dataService: DataService) {}
+
   profileForm = new FormGroup({
     firstName: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
       Validators.maxLength(15),
     ]),
-    lastName: new FormControl(''),
+    lastName: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(15),
+    ]),
     address: new FormGroup({
       street: new FormControl(''),
       city: new FormControl(''),
@@ -31,5 +39,7 @@ export class FormComponent {
 
   onSubmit() {
     console.warn(this.profileForm.value);
+
+    this.dataService.saveData(this.profileForm.value);
   }
 }
