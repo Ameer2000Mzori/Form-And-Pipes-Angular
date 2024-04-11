@@ -104,7 +104,7 @@ _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/
 
 # ABOUT THIS PROJECT
 
-This project is built using Angular, leveraging the latest version along with SCSS for styling. It incorporates advanced features such as @if and @for directives, along with other functionalities like pipes and reusable components. Designed as part of a job interview challenge, it showcases meticulous styling and organization. The seamless routing ensures smooth navigation between pages without unnecessary page reloads. Utilizing RxJS, the project employs reactive programming akin to React Redux Toolkit, streamlining data management for enhanced code cleanliness and efficiency. Moreover, the implementation of @defer optimizes page loading, embracing lazy loading for improved performance.
+"Form-And-Pipes-Angular" is a website created with the newest version of Angular. It's styled using SCSS and incorporates Angular's form features along with custom pipes to enhance functionality. The purpose of this project is to delve deeper into Angular and improve our understanding of it.
 
 # SlidingPuzzle
 
