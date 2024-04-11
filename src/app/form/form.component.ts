@@ -34,10 +34,12 @@ export class FormComponent {
       city: new FormControl(''),
       state: new FormControl(''),
       zip: new FormControl(''),
+      creationDate: new FormControl(new Date()),
     }),
   });
 
   onSubmit() {
     this.dataService.saveData(this.profileForm.value);
+    this.profileForm.reset();
   }
 }

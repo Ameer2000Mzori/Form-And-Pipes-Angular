@@ -2,14 +2,15 @@
 <div>
   @for(person of data; track person.index){
   <div>
-    <p>Name: {{ person.firstName }}</p>
-    <p>Name: {{ person.lastName }}</p>
+    <p>Name: {{ person.firstName | uppercase }}</p>
+    <p>Name: {{ person.lastName | lowercase }}</p>
     <div>
       <h5>address</h5>
       <p>street: {{ person.address.street }}</p>
       <p>City: {{ person.address.city }}</p>
       <p>state: {{ person.address.state }}</p>
       <p>zip: {{ person.address.zip }}</p>
+      <p>date: {{ person.creationDate | date }}</p>
     </div>
   </div>
   }

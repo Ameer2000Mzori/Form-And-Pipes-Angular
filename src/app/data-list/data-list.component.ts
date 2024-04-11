@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-data-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './data-list.component.html',
   styleUrl: './data-list.component.scss',
 })
